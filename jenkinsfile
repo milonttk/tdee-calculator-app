@@ -28,7 +28,7 @@ pipeline {
          sh "sonar-scanner \
             -Dsonar.projectKey=your-project-key \
             -Dsonar.sources=. \
-            -Dsonar.host.url=${env.SONARQUBE_URL} \
+            -Dsonar.host.url=${env.SONAR_URL} \
             -Dsonar.login=${env.SONARQUBE_TOKEN}"
         }
       }

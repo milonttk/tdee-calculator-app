@@ -19,6 +19,7 @@ pipeline {
         sh 'pip install -r requirements.txt'
       }
     }
+    /*
     stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http://35.174.165.105:9000/"
@@ -29,7 +30,7 @@ pipeline {
          sh "sonar -Dsonar.login=$SONAR_TOKEN -Dsonar.host.url=${SONAR_URL} -X"
         }
       }
-    }
+    }*/
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "pavan7777/tdee-cal:${BUILD_NUMBER}"

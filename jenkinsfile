@@ -25,7 +25,7 @@ pipeline {
       }
       steps {
         withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
-         sh "sonar-scanner -Dsonar.login=$SONAR_TOKEN -Dsonar.host.url=${SONAR_URL} -X"
+         sh "sonar -Dsonar.login=$SONAR_TOKEN -Dsonar.host.url=${SONAR_URL} -X"
         }
       }
     }

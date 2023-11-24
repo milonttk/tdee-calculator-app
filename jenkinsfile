@@ -14,7 +14,6 @@ pipeline {
        // sh 'pip install -r requirements.txt'
       }
     }
-    /*
     stage('Static Code Analysis') {
       environment {
         SONAR_URL = "http://35.174.165.105:9000/"
@@ -25,7 +24,7 @@ pipeline {
          sh "sonar -Dsonar.login=$SONAR_TOKEN -Dsonar.host.url=${SONAR_URL} -X"
         }
       }
-    }*/
+    }
     stage('Build and Push Docker Image') {
       environment {
         DOCKER_IMAGE = "pavan7777/tdee-cal:${BUILD_NUMBER}"
@@ -52,7 +51,7 @@ pipeline {
                     git config user.email "pavan.varada12@gmail.com"
                     git config user.name "PavanKarthik12"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" tdee-calculator-app/helm/deployment.yml
+                    sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" tdee-calculator-app/helm/deployment.yaml
                     git add tdee-calculator-app/helm/deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main

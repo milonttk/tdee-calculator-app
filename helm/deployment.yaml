@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tdee-cal
+  labels:
+    app: tdee-cal
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: tdee-cal
+  template:
+    metadata:
+      labels:
+        app: tdee-cal
+    spec:
+      containers:
+      - name: tdee-cal
+        image: pavan7777/tdee-cal:replaceImageTag
+        ports:
+        - containerPort: 8080

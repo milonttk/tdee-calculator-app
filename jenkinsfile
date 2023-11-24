@@ -25,11 +25,7 @@ pipeline {
       }
       steps {
         withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
-         sh "sonar-scanner \
-            -Dsonar.projectKey=com.karthik:tdee-cal-app \
-            -Dsonar.sources=. \
-            -Dsonar.host.url=${env.SONAR_URL} \
-            -Dsonar.login=${env.SONAR_URL}"
+         sh "sonar  -Dsonar.projectKey=com.karthik:tdee-cal-app -Dsonar.login=$SONAR_TOKEN -Dsonar.host.url=${SONAR_URL}"
         }
       }
     }

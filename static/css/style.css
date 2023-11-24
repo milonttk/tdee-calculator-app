@@ -1,0 +1,83 @@
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Form container styles */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 20px; /* Adjust as needed */
+}
+
+/* Form input styles */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Form button styles */
+.form-container button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Form button hover effect */
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+/* Form header styles */
+.form-container h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Text after the form styles */
+.additional-text {
+  text-align: center;
+  color: #555;
+  font-size: 14px;
+}
+
+/* Form link styles */
+.additional-text a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+/* Form link hover effect */
+.additional-text a:hover {
+  text-decoration: underline;
+}

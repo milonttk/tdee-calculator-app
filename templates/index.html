@@ -1,0 +1,49 @@
+
+
+<title>TDEE Calculator</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<div class="content">
+    <h1 style="text-align: center">TDEE Calculator</h1>
+    <br><br>
+    <div class="form">
+        <form action="/data" method="POST">
+            <label for="firstname">Age : </label>
+                <i class="fas fa-user"></i>
+            <input type="text" name="age" placeholder="Age" id="age" required>
+            <br><br>
+            <label for="gender"> Gender : </label>
+                <i class="fas fa-user"></i>
+			<input type="radio" id="male" name="fav_language" value="male">
+            <label for="html">Male</label>
+            <input type="radio" id="female" name="fav_language" value="female">
+            <label for="html">Female</label><br>
+            <br>
+            <label for="height">Height : </label>
+                <i class="fas fa-user"></i>
+            <input type="text" name="height" placeholder="in cm" id="height" required>
+            <br>
+            <br>
+            <label for="Weight">Weight : </label>
+            <i class="fas fa-user"></i>
+            <input type="text" name="weight" placeholder="in Kg" id="weight" required>
+            <br><br>
+            <label for="Activity">Activity : </label>
+            <i class="fas fa-user"></i>
+              <select name="activity" id="activity">
+              <option value="sedentary">Sedentary : Little or no exercise</option>
+              <option value="light">Light : Exercise 1-3 times per week </option>
+              <option value="moderate">Moderately Active : Exercise 4-5 times per week </option>
+              <option value="very_active">Very Active :Intense Exercise 6-7 times per week </option>
+    		  <option value="extra_active">Extra Active : Very Intense Exercise or physical job </option>
+  			</select>
+            <br>
+            <br>
+            <input type="submit" value="Calculate">
+        </form>
+    </div>
+</div>
+<br><br><br>
+<div>
+    
+</div>
+

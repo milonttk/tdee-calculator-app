@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <h2 style="background-color: green;">Result</h2> 
+    <br>
+    <div class="side-by-side">
+        <h4>The estimated TDEE or body weight maintenance energy requirement is    </h4> 
+
+        <h4 style="color: green;">{{ result['TDEE']    }}  </h4>  
+        <h4>    Calories per day  </h4>
+    </div>
+    <div class="side1-by-side">
+        <h4> Your BMI Score is : {{ result['BMI'] }} Kg/m2 </h4>
+        <h4 style="color: {{ result['color'] }};">{{  result['BMI Type']  }}</h4>
+        <h4> ( Healthy BMI Range: 18.5 - 25 kg/m2 )</h4>
+    </div>
+    </body>
+    <div>
+        <h4 style="text-indent: 5px;">Energy Intake to loose weight :</h4>
+        <table>
+            <tr>
+                <td> Mid Weight Loss </td>
+                <td> {{ result ['Mid Weight Loss']}} <br><br> (91%  Calories/day)</td>
+            </tr>
+            <tr>
+                <td> Weight Loss </td>
+                <td> {{ result ['Weight Loss']}} <br> <br> (82% Calories/day )</td>
+            </tr>
+        </table>
+        <br>
+        <h4>Energy Intake to Gain Weight  :</h4>
+        <table>
+            <tr>
+                <td> Mid Weight Gain </td>
+                <td> {{ result ['Mid Weight Gain'] }} <br> <br> (109% Calories/day)</td>
+            </tr>
+            <tr>
+                <td> Weight Gain</td>
+                <td> {{ result ['Weight Gain']}}  <br> <br> (118% Calories/day)</td>
+            </tr>
+            <tr>
+                <td> Fast Weight Gain </td>
+                <td> {{ result ['Fast Weight Gain'] }} <br><br> (136% Calories/day)</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

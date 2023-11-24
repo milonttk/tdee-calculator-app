@@ -28,7 +28,7 @@ pipeline {
          sh "sonar-scanner \
             -Dsonar.sources=. \
             -Dsonar.host.url=${env.SONAR_URL} \
-            -Dsonar.login=${env.SONARQUBE_TOKEN}"
+            -Dsonar.login=${env.SONAR_TOKEN}"
         }
       }
     }

@@ -55,7 +55,7 @@ pipeline {
                     git config user.name "PavanKarthik12"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     IMAGE_NAME=${IMAGE_NAME}
-                    sed -E 's/(${IMAGE_NAME}:)([0-9]+)/\1'"${BUILD_NUMBER}"'/' helm/deployment.yaml
+                    sed -E 's/({IMAGE_NAME}):([0-9]+)/\1'"${BUILD_NUMBER}"'/' helm/deployment.yaml
                     git add helm/deployment.yaml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main

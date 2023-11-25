@@ -8,6 +8,7 @@ spec:
   - name: http
     port: 80
     targetPort: 8000
+    nodePort: 31000
     protocol: TCP
   selector:
     app: tdee-cal

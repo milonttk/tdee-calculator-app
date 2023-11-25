@@ -18,4 +18,4 @@ spec:
       - name: tdee-cal
         image: pavan7777/tdee-cal:56
         ports:
-        - containerPort: 8000
+        - containerPort: 5000

@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: tdee-cal
-        image: pavan7777/tdee-cal:56
+        image: pavan7777/tdee-cal:57
         ports:
         - containerPort: 5000

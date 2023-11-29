@@ -11,3 +11,5 @@ Continuous Deployment : ArgoCD
 Container Orchestration tool : Minikube (Lightweight K8S Implementation)
 
 Virtual Machine used : AWS EC2 Instance
+
+https://youtu.be/jNPGo6A4VHc?si=0Jko00omg1Zuhk8b
